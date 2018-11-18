@@ -6,10 +6,10 @@ const Searchbar = () => {
   return (
     <WOWContext.Consumer>
       {ctx => (
-                                               <FormGroup>
-                                                 <Input type='search' placeholder='Search by Name' onKeyUp={(e) => ctx.updateRecords(e.target.value)} />
-                                               </FormGroup>
-                                             )}
+                                                                  <FormGroup>
+                                                                    <Input type='search' placeholder='Search by Name' onKeyUp={(e) => ctx.updateRecords(e.target.value)} />
+                                                                  </FormGroup>
+                                                                )}
     </WOWContext.Consumer>
   )
 }
