@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 import './App.css'
+import { Container } from 'reactstrap'
+import { WOWStore } from './store.js'
+import Header from './components/Header'
+import SubHeader from './components/SubHeader'
+import WOWList from './containers/WOWList'
 
 class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'>Learn React</a>
-        </header>
-      </div>
+      <WOWStore>
+        <Container fluid={true}>
+          <Header />
+          <SubHeader/>
+          <WOWList />
+        </Container>
+      </WOWStore>
     )
   }
 }
